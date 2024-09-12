@@ -1,0 +1,41 @@
+Ensimag 2A POO - TP 2022/23 
+Equipe : 43
+============================
+
+En plus des tests fournis par les enseignants, on a ajouté:
+	* TestDeplacement: Exemple simple pour le deplacement d'un robot
+	* TestPath: Exemple simple d'un robot qui trouve le plus court chemin
+	* TestElementaire: Exemple de simulation avec la strategie elementaire en passant un fichier .map comme argument
+	* TestEvolue: Exemple de simulation avec la strategie evolue en passant un fichier .map comme argument
+	
+La compilation genere les executables:
+	* exeDeplacement
+	* exePath
+	* exeElementaire
+	* exeEvolue
+
+********************************** HOW TO USE ?************************************
+Pour compiler tous les fichiers : make all
+
+Pour executer par exemple la strategie elementaire sur la carte "desertOfDeath-20x20.map" : make exeElementaire CARTE=desertOdDeath-20x20
+
+Pour executer par exemple la strategie evolue sur la carte "mushroomOfHell-20x20.map" : make exeEvolue CARTE=mushroomOfHell-20x20
+***********************************************************************************
+
+
+
+- src: contient les classes
+
+- cartes: quelques exemples de fichiers de donnees
+
+- bin/gui.jar: archive Java contenant les classes de l'interface graphique. Voir un exemple d'utilisation dans TestInvader.java
+
+- doc: la documentation (API) des classes 
+
+
+--Remarque:
+	*Le reset cause quelque problemes pour les tests sans chefPompier (TestPath et TestDeplacement) mais fonctionne parfaitement
+	pour les tests avec une strategie (Un chefPompier)
+
+	*Pour la carte "carteSujet.map" la taille des cases fournis est très grande, donc on vous conseille de changer le temps de simulation sur l'interface.
+
